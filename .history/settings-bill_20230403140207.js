@@ -1,0 +1,7 @@
+
+
+  function billWithSettings() {
+    return {
+      getCallCost
+    }
+  }

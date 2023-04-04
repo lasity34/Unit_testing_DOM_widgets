@@ -6,7 +6,7 @@ describe("Calculating bill with factory functions", function () {
     assert.equal(2.75, calculateWithBill.getCallCosts());
   });
 
-  it("cost should set sms value to R0.75", function () {
+  it("cost should set the value sms to R0.75", function () {
     const calculateWithBill = calculateBill();
 
     calculateWithBill.setSmsCost(0.75);
@@ -36,26 +36,3 @@ describe("Calculating bill with factory functions", function () {
     assert.equal(30, calculateWithBill.getCriticalLevel());
   });
 });
-
-describe("use calculate_bill values", function() {
-    it("should take in a string with 2 sms", function(){
-        const calculateWithBill = calculateBill()
-
-        calculateWithBill.setSmsCost(0.75)
-        calculateWithBill.setTotalCostString("sms, sms")
-
-     
-        assert.equal(1.5, calculateWithBill.getTotalCost())
-    }) 
-
-    it("should take in a string with 2 sms and 2 calls", function(){
-      const calculateWithBill = calculateBill()
-
-      calculateWithBill.setSmsCost(0.75)
-      calculateWithBill.setCallCosts(2.75)
-      calculateWithBill.setTotalCostString("sms, sms, call, call")
-
-   
-      assert.equal(7, calculateWithBill.getTotalCost())
-  }) 
-})

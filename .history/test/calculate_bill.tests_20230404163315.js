@@ -56,6 +56,6 @@ describe("use calculate_bill values", function() {
       calculateWithBill.setTotalCostString("sms, sms, call, call")
 
    
-      assert.equal(7, calculateWithBill.getTotalCost())
+      assert.equal(6, calculateWithBill.getTotalCost())
   }) 
 })

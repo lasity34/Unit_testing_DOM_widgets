@@ -46,18 +46,15 @@ function calculateBill() {
         return theCriticalLevel
     }
 
-    function setTotalCostString(str) {
-    
-        const splitString = str.split(",")
+    function setSmsCostString(str) {
+        const splitStr = str.split(",")
 
-        for (let i = 0; i < splitString.length; i++) {
-            if (splitString[i].includes("sms")) {
+        for (let i = 0; i < splitStr.length; i++) {
+            if (str[i].includes("sms")) {
                 theTotalCost += 0.75
-            } else if ("call") {
-                theTotalCost += 2.75
             }
         }
-      
+        console.log(splitStr)
     }
 
   
@@ -73,7 +70,7 @@ function calculateBill() {
         getCallCosts,
         setSmsCost,
         getSmsCost,
-        setTotalCostString,
+        setSmsCostString,
         setWarningLevel,
         getwarningLevel,
         setCriticalLevel,

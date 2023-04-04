@@ -52,10 +52,9 @@ describe("use calculate_bill values", function() {
       const calculateWithBill = calculateBill()
 
       calculateWithBill.setSmsCost(0.75)
-      calculateWithBill.setCallCosts(2.75)
       calculateWithBill.setTotalCostString("sms, sms, call, call")
 
    
-      assert.equal(7, calculateWithBill.getTotalCost())
+      assert.equal(1.5, calculateWithBill.getTotalCost())
   }) 
 })

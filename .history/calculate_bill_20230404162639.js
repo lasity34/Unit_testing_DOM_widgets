@@ -48,15 +48,7 @@ function calculateBill() {
 
     function setTotalCostString(str) {
     
-        const splitString = str.split(",")
 
-        for (let i = 0; i < splitString.length; i++) {
-            if (splitString[i].includes("sms")) {
-                theTotalCost += 0.75
-            } else if ("call") {
-                theTotalCost += 2.75
-            }
-        }
       
     }
 
@@ -73,7 +65,7 @@ function calculateBill() {
         getCallCosts,
         setSmsCost,
         getSmsCost,
-        setTotalCostString,
+        setSmsCostString,
         setWarningLevel,
         getwarningLevel,
         setCriticalLevel,

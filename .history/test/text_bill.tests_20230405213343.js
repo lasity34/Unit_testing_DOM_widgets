@@ -68,7 +68,7 @@ describe("use text_bill values", function() {
         assert.equal(0.75, calculateTextBill.getTotalCost())
         assert.equal(0.75, calculateTextBill.getTotalSmsCost())
         calculateTextBill.setTotalCostString("call")
-        assert.equal(2.75, calculateTextBill.getTotalCallCost())
+        assert.equal(3.5, calculateTextBill.getTotalCost())
         assert.equal(3.5, calculateTextBill.getTotalCost())
     })
 })

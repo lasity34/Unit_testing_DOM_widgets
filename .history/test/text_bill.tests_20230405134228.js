@@ -78,50 +78,7 @@ describe("warning and critical level for text_bill", function() {
         calculateTextBill.setWarningLevel(30)
     
         calculateTextBill.setTotalCostString("sms")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
         assert.equal("warning", calculateTextBill.totalClassName())
-
-    })
-
-    it("should return classname if warning level goes above 50", function() {
-
-        const calculateTextBill = textBill();
-
-        calculateTextBill.setCriticalLevel(50);
-        calculateTextBill.setWarningLevel(30)
-    
-        calculateTextBill.setTotalCostString("sms")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        
-        assert.equal("critical", calculateTextBill.totalClassName())
 
     })
 })

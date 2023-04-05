@@ -114,13 +114,6 @@ describe("warning and critical level for text_bill", function() {
         calculateTextBill.setTotalCostString("call")
         calculateTextBill.setTotalCostString("call")
         calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        calculateTextBill.setTotalCostString("call")
-        
         assert.equal("critical", calculateTextBill.totalClassName())
 
     })

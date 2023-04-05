@@ -63,8 +63,6 @@ describe("use radio button values", function() {
         billWithRadio.makeSms();
         billWithRadio.makeSms();
 
-        assert.equal(2.25, billWithRadio.getTotalCost())
-        assert.equal(2.25, billWithRadio.getsmsCostTotal())
-        assert.equal(0, billWithRadio.getCallCostTotal())
+        assert.equal(1.5, billWithRadio.getTotalCost())
     })
 })

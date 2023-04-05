@@ -41,31 +41,23 @@ function radioBill() {
       return theCriticalLevel;
     }
 
-   
     function makeSms() {
-        smsCostTotal += theSmsCost
+        smsCostTotal += getSmsCost
     }
 
     function makeCall() {
-        callCostTotal += theCallCost
+        callCostTotal += getCallCosts
     }
 
-    function getCallCostTotal() {
-        return callCostTotal
-    }
-
-    function getsmsCostTotal() {
-        return smsCostTotal
-    }
 
     function getTotalCost() {
-        return  callCostTotal + smsCostTotal
+        return smsCostTotal + callCostTotal
       }
     
       function totalClassName() {
-        if (getTotalCost() >= getCriticalLevel()) {
+        if (theTotalCost >= getCriticalLevel()) {
           return "critical";
-        } else if (getTotalCost() >= getwarningLevel()) {
+        } else if (theTotalCost >= getwarningLevel()) {
           return "warning";
         }
       }
@@ -79,8 +71,6 @@ function radioBill() {
         getwarningLevel,
         setCriticalLevel,
         getCriticalLevel,
-        getsmsCostTotal,
-        getCallCostTotal,
         getTotalCost,
         totalClassName,
         makeCall,

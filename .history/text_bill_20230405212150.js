@@ -57,16 +57,16 @@ function textBill() {
     return totalCallCost 
   }
 
- theTotalCost = totalCallCost + totalSmsCost
+
 
   function getTotalCost() {
-    return totalCallCost + totalSmsCost
+    return theTotalCost;
   }
 
   function totalClassName() {
-    if (getTotalCost() >= getCriticalLevel()) {
+    if (theTotalCost >= getCriticalLevel()) {
       return "critical";
-    } else if (getTotalCost() >= getwarningLevel()) {
+    } else if (theTotalCost >= getwarningLevel()) {
       return "warning";
     }
   }

@@ -42,31 +42,31 @@ function textBill() {
 
   function setTotalCostString(str) {
     if (str.includes("sms")) {
-      totalSmsCost += 0.75;
+      theTotalCost += 0.75;
     } else if (str.includes("call")) {
-     totalCallCost += 2.75;
+      theTotalCost += 2.75;
     }
   }
 
  
   function getTotalSmsCost() {
-    return totalSmsCost 
+    return totalSmsCost += theSmsCost
   }
 
   function getTotalCallCost() {
-    return totalCallCost 
+    return totalCallCost += theCallCost
   }
 
- theTotalCost = totalCallCost + totalSmsCost
+
 
   function getTotalCost() {
-    return totalCallCost + totalSmsCost
+    return theTotalCost;
   }
 
   function totalClassName() {
-    if (getTotalCost() >= getCriticalLevel()) {
+    if (theTotalCost >= getCriticalLevel()) {
       return "critical";
-    } else if (getTotalCost() >= getwarningLevel()) {
+    } else if (theTotalCost >= getwarningLevel()) {
       return "warning";
     }
   }

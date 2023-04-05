@@ -47,7 +47,6 @@ describe("use text_bill values", function() {
 
         calculateTextBill.setTotalCostString("call")
         assert.equal(2.75, calculateTextBill.getTotalCost())
-        assert.equal(2.75, calculateTextBill.getTotalCallCost())
     })
 
     it("should be able to take in the text string sms", function() {

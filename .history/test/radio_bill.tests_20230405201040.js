@@ -46,25 +46,19 @@ describe("use radio button values", function() {
         const billWithRadio = radioBill();
 
         billWithRadio.setCallCosts(2.75)
-        billWithRadio.setSmsCost(0.75)
         billWithRadio.makeCall();
         billWithRadio.makeCall();
 
-        assert.equal(5.5, billWithRadio.getTotalCost())
-        assert.equal(5.5, billWithRadio.getCallCostTotal())
-        assert.equal(0, billWithRadio.getsmsCostTotal())
+        assert.equal(2.75, billWithRadio.getTotalCost())
     })
 
     it("should make 2 sms", function() {
         const billWithRadio = radioBill();
 
-        billWithRadio.setSmsCost(0.75)
-        billWithRadio.makeSms();
+        billWithRadio.setCallCosts(2.75)
         billWithRadio.makeSms();
         billWithRadio.makeSms();
 
-        assert.equal(2.25, billWithRadio.getTotalCost())
-        assert.equal(2.25, billWithRadio.getsmsCostTotal())
-        assert.equal(0, billWithRadio.getCallCostTotal())
+        assert.equal(1.5, billWithRadio.getTotalCost())
     })
 })

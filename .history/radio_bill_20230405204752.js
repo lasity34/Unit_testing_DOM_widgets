@@ -43,11 +43,11 @@ function radioBill() {
 
    
     function makeSms() {
-        smsCostTotal += theSmsCost
+        smsCostTotal += getSmsCost
     }
 
     function makeCall() {
-        callCostTotal += theCallCost
+        callCostTotal += getCallCosts
     }
 
     function getCallCostTotal() {
@@ -63,9 +63,9 @@ function radioBill() {
       }
     
       function totalClassName() {
-        if (getTotalCost() >= getCriticalLevel()) {
+        if (theTotalCost >= getCriticalLevel()) {
           return "critical";
-        } else if (getTotalCost() >= getwarningLevel()) {
+        } else if (theTotalCost >= getwarningLevel()) {
           return "warning";
         }
       }

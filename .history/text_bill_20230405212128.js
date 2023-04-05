@@ -50,23 +50,23 @@ function textBill() {
 
  
   function getTotalSmsCost() {
-    return totalSmsCost 
+    return totalSmsCost += theSmsCost
   }
 
   function getTotalCallCost() {
-    return totalCallCost 
+    return totalCallCost += theCallCost
   }
 
- theTotalCost = totalCallCost + totalSmsCost
+
 
   function getTotalCost() {
-    return totalCallCost + totalSmsCost
+    return theTotalCost;
   }
 
   function totalClassName() {
-    if (getTotalCost() >= getCriticalLevel()) {
+    if (theTotalCost >= getCriticalLevel()) {
       return "critical";
-    } else if (getTotalCost() >= getwarningLevel()) {
+    } else if (theTotalCost >= getwarningLevel()) {
       return "warning";
     }
   }

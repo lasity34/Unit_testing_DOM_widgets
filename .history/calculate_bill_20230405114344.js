@@ -68,10 +68,10 @@ function calculateBill() {
     }
 
     function totalClassName() {
-        if (theTotalCost >= getCriticalLevel()) {
+        if (theTotalCost >= getCriticalLevel) {
             return "critical"
-        } else if (theTotalCost >= getwarningLevel()) {
-            return "warning"
+        } else if (theTotalCost >= getwarningLevel) {
+            return "warnings"
         }
     }
 
@@ -81,12 +81,12 @@ function calculateBill() {
         getCallCosts,
         setSmsCost,
         getSmsCost,
+        setTotalCostString,
         setWarningLevel,
         getwarningLevel,
         setCriticalLevel,
         getCriticalLevel,
         getTotalCost,
-        setTotalCostString,
-       totalClassName
+       
     }
 }

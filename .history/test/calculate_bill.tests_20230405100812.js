@@ -38,7 +38,7 @@ describe("Calculating bill with factory functions", function () {
 });
 
 describe("use calculate_bill values", function() {
-    it("should take in a string with 2 sms'es at R0.75 per sms cost", function(){
+    it("should take in a string with 2 sms at R0.75", function(){
         const calculateWithBill = calculateBill()
 
         calculateWithBill.setSmsCost(0.75)
@@ -47,16 +47,6 @@ describe("use calculate_bill values", function() {
      
         assert.equal(1.5, calculateWithBill.getTotalCost())
     }) 
-
-    it("should take in a string with 2 calls at R2.75 per call cost", function(){
-      const calculateWithBill = calculateBill()
-
-      calculateWithBill.setCallCosts(2.75)
-      calculateWithBill.setTotalCostString("call, call")
-
-   
-      assert.equal(5.5, calculateWithBill.getTotalCost())
-  })
 
     it("should take in a string with 2 sms and 2 calls", function(){
       const calculateWithBill = calculateBill()
@@ -68,35 +58,4 @@ describe("use calculate_bill values", function() {
    
       assert.equal(7, calculateWithBill.getTotalCost())
   }) 
-})
-
-describe("warning & critical level for calculate bill", function() {
-
-  it("it should return class name if warning level is reached", function() {
-    const calculateWithBill = calculateBill();
-
-    calculateWithBill.setSmsCost(0.75)
-    calculateWithBill.setCallCosts(2.75)
-    calculateWithBill.setWarningLevel(7)
-    calculateWithBill.setCriticalLevel(10)
-    calculateWithBill.setTotalCostString("sms, call,  call, call")
-    
-    assert.equal('warning', calculateWithBill.totalClassName())
-
-
-  })
-
-  it("it should return class name if critical level is reached", function() {
-    const calculateWithBill = calculateBill();
-
-    calculateWithBill.setSmsCost(0.75)
-    calculateWithBill.setCallCosts(2.75)
-    calculateWithBill.setWarningLevel(7)
-    calculateWithBill.setCriticalLevel(10)
-    calculateWithBill.setTotalCostString("sms,  call, call, call, call")
-    
-    assert.equal('critical', calculateWithBill.totalClassName())
-
-
-  })
 })

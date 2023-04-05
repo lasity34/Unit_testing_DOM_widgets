@@ -53,7 +53,7 @@ function calculateBill() {
         for (let i = 0; i < splitString.length; i++) {
             if (splitString[i].includes("sms")) {
                 theTotalCost += 0.75
-            } else if (splitString[i].includes("call")) {
+            } else if (splitString[i].includes("sms")) {
                 theTotalCost += 2.75
             }
         }
@@ -67,26 +67,18 @@ function calculateBill() {
         return theTotalCost
     }
 
-    function totalClassName() {
-        if (theTotalCost >= getCriticalLevel()) {
-            return "critical"
-        } else if (theTotalCost >= getwarningLevel()) {
-            return "warning"
-        }
-    }
-
 
     return {
         setCallCosts,
         getCallCosts,
         setSmsCost,
         getSmsCost,
+        setTotalCostString,
         setWarningLevel,
         getwarningLevel,
         setCriticalLevel,
         getCriticalLevel,
         getTotalCost,
-        setTotalCostString,
-       totalClassName
+       
     }
 }

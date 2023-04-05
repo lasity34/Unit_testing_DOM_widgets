@@ -81,12 +81,12 @@ function calculateBill() {
         getCallCosts,
         setSmsCost,
         getSmsCost,
+        setTotalCostString,
         setWarningLevel,
         getwarningLevel,
         setCriticalLevel,
         getCriticalLevel,
         getTotalCost,
-        setTotalCostString,
        totalClassName
     }
 }

@@ -93,9 +93,9 @@ describe("warning & critical level for calculate bill", function() {
     calculateWithBill.setCallCosts(2.75)
     calculateWithBill.setWarningLevel(7)
     calculateWithBill.setCriticalLevel(10)
-    calculateWithBill.setTotalCostString("sms,  call, call, call, call")
+    calculateWithBill.setTotalCostString("sms, call,  call, call, call, call")
     
-    assert.equal('critical', calculateWithBill.totalClassName())
+    assert.equal('warning', calculateWithBill.totalClassName())
 
 
   })

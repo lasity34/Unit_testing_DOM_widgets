@@ -55,7 +55,7 @@ describe("use calculate_bill values", function() {
       calculateWithBill.setTotalCostString("call, call")
 
    
-      assert.equal(5.5, calculateWithBill.getTotalCost())
+      assert.equal(1.5, calculateWithBill.getCallCosts())
   })
 
     it("should take in a string with 2 sms and 2 calls", function(){
@@ -68,35 +68,4 @@ describe("use calculate_bill values", function() {
    
       assert.equal(7, calculateWithBill.getTotalCost())
   }) 
-})
-
-describe("warning & critical level for calculate bill", function() {
-
-  it("it should return class name if warning level is reached", function() {
-    const calculateWithBill = calculateBill();
-
-    calculateWithBill.setSmsCost(0.75)
-    calculateWithBill.setCallCosts(2.75)
-    calculateWithBill.setWarningLevel(7)
-    calculateWithBill.setCriticalLevel(10)
-    calculateWithBill.setTotalCostString("sms, call,  call, call")
-    
-    assert.equal('warning', calculateWithBill.totalClassName())
-
-
-  })
-
-  it("it should return class name if critical level is reached", function() {
-    const calculateWithBill = calculateBill();
-
-    calculateWithBill.setSmsCost(0.75)
-    calculateWithBill.setCallCosts(2.75)
-    calculateWithBill.setWarningLevel(7)
-    calculateWithBill.setCriticalLevel(10)
-    calculateWithBill.setTotalCostString("sms,  call, call, call, call")
-    
-    assert.equal('critical', calculateWithBill.totalClassName())
-
-
-  })
 })

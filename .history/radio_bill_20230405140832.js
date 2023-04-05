@@ -51,7 +51,7 @@ function radioBill() {
 
 
     function getTotalCost() {
-        return theCallCost + theSmsCost
+        return theTotalCost;
       }
     
       function totalClassName() {

@@ -1,6 +1,6 @@
 
 
-describe("Bill with radio buttons factory function", function() {
+describe("Bill with radio buttons factory settings", function() {
     it("cost of sms should have a value of R0.75", function() {
         const billWithRadio = radioBill()
 
@@ -30,13 +30,5 @@ describe("Bill with radio buttons factory function", function() {
        billWithRadio.setWarningLevel(30)
 
        assert.equal(30, billWithRadio.getwarningLevel())
-    })
-
-    it("Critical level should have a value of 50", function() {
-        const billWithRadio = radioBill()
-
-       billWithRadio.setCriticalLevel(50)
-
-       assert.equal(50, billWithRadio.getCriticalLevel())
     })
 })

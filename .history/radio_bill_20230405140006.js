@@ -45,13 +45,9 @@ function radioBill() {
         smsCostTotal += getSmsCost
     }
 
-    function makeCall() {
-        callCostTotal += getCallCosts
-    }
-
 
     function getTotalCost() {
-        return theCallCost + theSmsCost
+        return theTotalCost;
       }
     
       function totalClassName() {
@@ -73,7 +69,5 @@ function radioBill() {
         getCriticalLevel,
         getTotalCost,
         totalClassName,
-        makeCall,
-        makeSms
       };
 }

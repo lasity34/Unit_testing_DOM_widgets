@@ -68,79 +68,16 @@ describe("use radio button values", function() {
         assert.equal(0, billWithRadio.getCallCostTotal())
     })
 
-    it("should make 2 sms and 2 call", function() {
+    it("should make 2 sms", function() {
         const billWithRadio = radioBill();
 
         billWithRadio.setSmsCost(0.75)
-        billWithRadio.setCallCosts(2.75)
         billWithRadio.makeSms();
         billWithRadio.makeSms();
-        billWithRadio.makeCall();
-        billWithRadio.makeCall();
+        billWithRadio.makeSms();
 
-        assert.equal(7.00, billWithRadio.getTotalCost())
-        assert.equal(1.5, billWithRadio.getsmsCostTotal())
-        assert.equal(5.5, billWithRadio.getCallCostTotal())
+        assert.equal(2.25, billWithRadio.getTotalCost())
+        assert.equal(2.25, billWithRadio.getsmsCostTotal())
+        assert.equal(0, billWithRadio.getCallCostTotal())
     })
-})
-
-describe("warning and critical level for radio bill", function() {
-    it("should return classname warning if total bill goes above 30", function() {
-        const billWithRadio = radioBill();
-
-        billWithRadio.setSmsCost(0.75)
-        billWithRadio.setCallCosts(2.75)
-        billWithRadio.setCriticalLevel(50)
-        billWithRadio.setWarningLevel(30);
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-
-
-        assert.equal("warning", billWithRadio.totalClassName())
-      
-
-    }) 
-
-    it("should return classname critical if total bill goes above 50", function() {
-        const billWithRadio = radioBill();
-
-        billWithRadio.setSmsCost(0.75)
-        billWithRadio.setCallCosts(2.75)
-        billWithRadio.setCriticalLevel(50)
-        billWithRadio.setWarningLevel(30);
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-
-
-        assert.equal("critical", billWithRadio.totalClassName())
-      
-
-    }) 
 })

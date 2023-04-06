@@ -88,59 +88,9 @@ describe("warning and critical level for radio bill", function() {
     it("should return classname warning if total bill goes above 30", function() {
         const billWithRadio = radioBill();
 
+        billWithRadio.setWarningLevel(30);
         billWithRadio.setSmsCost(0.75)
         billWithRadio.setCallCosts(2.75)
-        billWithRadio.setCriticalLevel(50)
-        billWithRadio.setWarningLevel(30);
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-
-
-        assert.equal("warning", billWithRadio.totalClassName())
-      
-
-    }) 
-
-    it("should return classname critical if total bill goes above 50", function() {
-        const billWithRadio = radioBill();
-
-        billWithRadio.setSmsCost(0.75)
-        billWithRadio.setCallCosts(2.75)
-        billWithRadio.setCriticalLevel(50)
-        billWithRadio.setWarningLevel(30);
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-
-
-        assert.equal("critical", billWithRadio.totalClassName())
-      
 
     }) 
 })

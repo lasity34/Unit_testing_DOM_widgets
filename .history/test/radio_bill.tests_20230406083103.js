@@ -128,15 +128,6 @@ describe("warning and critical level for radio bill", function() {
         billWithRadio.makeCall()
         billWithRadio.makeCall()
         billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
-        billWithRadio.makeCall()
 
 
         assert.equal("critical", billWithRadio.totalClassName())
